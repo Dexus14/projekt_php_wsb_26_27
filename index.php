@@ -1,9 +1,11 @@
 <?php
 
 require_once 'Classes/Student.php';
+require_once 'Classes/Teacher.php';
 
-$student1 = new Student('Jan', '18', 'ZSK');
-$student2 = new Student('Anna', '16', 'ZSŁ');
+$student1 = new Student('Jan', 18, 'ZSK');
+$student2 = new Student('Anna', 16, 'ZSŁ');
+$teacher = new Teacher('Piotr', 35, 'ZSK', 'Programowanie');
 ?>
 
 <!doctype html>
@@ -30,6 +32,17 @@ $student2 = new Student('Anna', '16', 'ZSŁ');
     <?php
     echo $student1->getHtml();
     echo $student2->getHtml();
+    ?>
+
+    <h1>Nauczyciel</h1>
+    <?php
+    echo $teacher->getInfo() . '<br>';
+    ?>
+
+    <h2>Informacje nauczyciel HTML - HEREDOC</h2>
+
+    <?php
+    echo $teacher->getHtml();
     ?>
 </body>
 </html>
